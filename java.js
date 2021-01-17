@@ -2,20 +2,20 @@ var player1 = "Player 1";
 var player2 = "Player 2";  
  function playdice() { 
         setTimeout(function () { 
-            var randomNumber1 = Math.floor(Math.random() * 6) + 1; 
-            var randomNumber2 = Math.floor(Math.random() * 6) + 1; 
+            var a = Math.floor(Math.random() * 6) + 1; 
+            var b = Math.floor(Math.random() * 6) + 1; 
   
             document.querySelector(".image1").setAttribute("src", 
-                "dice" + randomNumber1 + ".png"); 
+                "dice" + a + ".png"); 
   
             document.querySelector(".image2").setAttribute("src", 
-                "dice" + randomNumber2 + ".png"); 
+                "dice" + b + ".png"); 
   
-            if (randomNumber1 === randomNumber2) { 
+            if (a === b) { 
                 document.querySelector("h1").innerHTML = "Draw!"; 
             } 
   
-            else if (randomNumber1 < randomNumber2) { 
+            else if (a < b) { 
                 document.querySelector("h1").innerHTML 
                                 = (player2 + " WINS!"); 
             } 
